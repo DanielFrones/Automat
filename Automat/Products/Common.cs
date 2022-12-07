@@ -12,5 +12,11 @@ namespace Automat.Products
         {
             return $"You have {amount} options to choose between. Press the number you want to order:";
         }
+
+
+        public static void NotEnoughMoney()
+        {
+            Console.WriteLine("Not enough money insert more cash for any of these items, back to main menu!"); 
+        }
     }
 }

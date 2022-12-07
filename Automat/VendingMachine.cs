@@ -25,11 +25,13 @@ namespace Automat
         public int IniateVendingMachine()
         {
 
-
+            
             int state = 0;
-            Console.WriteLine($"Vending machine's here, welcome! {cashInMachine}$ Left");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"Vending machine's here, welcome! {cashInMachine}$ Left inside me for you to use!");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(Common.Choices(7));
-            Console.WriteLine("1 for liquid product: \n2 for meal product \n3 for rough waether product\n4 See wallet \n5 Insert Coin \n6 Get change back \n7 Quit");
+            Console.WriteLine("1: For liquid product \n2: For meal product \n3: For rough weather product\n4: See wallet \n5: Insert Coin \n6: Get change back \n7: Quit");
             try
             {
                 state = Convert.ToInt32(Console.ReadLine());
@@ -57,7 +59,9 @@ namespace Automat
                         else
                         {
                             Console.Clear();
-                            Console.WriteLine("Not enough money insert more cash, back to main menu!");
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Common.NotEnoughMoney();
+                            Console.ForegroundColor = ConsoleColor.White;
                             ChooseCategory(IniateVendingMachine());
                         }
                         break;
@@ -67,7 +71,9 @@ namespace Automat
                         else
                         {
                             Console.Clear();
-                            Console.WriteLine("Not enough money insert more cash, back to main menu!");
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Common.NotEnoughMoney();
+                            Console.ForegroundColor = ConsoleColor.White;
                             ChooseCategory(IniateVendingMachine());
                         }
                         break;
@@ -77,13 +83,17 @@ namespace Automat
                         else
                         {
                             Console.Clear();
-                            Console.WriteLine("Not enough money insert more cash, back to main menu!");
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Common.NotEnoughMoney();
+                            Console.ForegroundColor = ConsoleColor.White;
                             ChooseCategory(IniateVendingMachine());
                         }
                         break;
                     case 4:
                         Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine($"\n{wallet.Total} dolla$ left in pocket\n");
+                        Console.ForegroundColor = ConsoleColor.White;
                         ChooseCategory(IniateVendingMachine());
                         break;
                     case 5:
@@ -91,7 +101,11 @@ namespace Automat
                         InsertCoin(InitiateInsertCoin());
                         break;
                     case 6:
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Yellow;
                         wallet.ChangeBack(cashInMachine);
+                        Console.WriteLine($"\n{wallet.Total} dolla$ left in pocket\n");
+                        Console.ForegroundColor= ConsoleColor.White;
                         cashInMachine = 0;
                         ChooseCategory(IniateVendingMachine());
                         break;
@@ -159,8 +173,10 @@ namespace Automat
                 }
             }
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine($"Wallet total = {wallet.Total}");
-            TotalCashInMachine();
+           
+            Console.ForegroundColor = ConsoleColor.White;
             ChooseCategory(IniateVendingMachine());
         }
 
@@ -168,7 +184,7 @@ namespace Automat
         public int InitiateInsertCoin()
         {
             int choice = 0;
-            Console.WriteLine("Insert coins\n for ones press 1 \n for fives press 2 \n for tens press 3 \n To stop press 4");
+            Console.WriteLine("Insert coins\n1: For Ones  \n2: For Fives \n3: For tens \n4: To stop");
             try
 
             {
@@ -674,7 +690,8 @@ namespace Automat
                     if (sylvester.Cost < cashInMachine)
                     {
 
-
+                        cashInMachine -= sylvester.Cost;
+                        TotalCashInMachine();
                         Console.WriteLine($"Would you like to purchase a {sylvester.Description()} for: {sylvester.Cost}$ ?\n 1: yes\n2: no(Back to main menu)");
 
                         var choiceSylvester = Convert.ToInt32(Console.ReadLine());
@@ -731,6 +748,8 @@ namespace Automat
                     IProduct umbrella = new Umbrella();
                     if (umbrella.Cost < cashInMachine)
                     {
+                        cashInMachine -= umbrella.Cost;
+                        TotalCashInMachine();
                         Console.WriteLine($"Would you like to purchase a {umbrella.Description()} for: {umbrella.Cost}$ ?\n 1: yes\n2: no(Back to main menu)");
 
                         var choiceGrogg = Convert.ToInt32(Console.ReadLine());
