@@ -8,21 +8,29 @@ namespace Automat.Products.MealProducts
 {
     public class CupOfRamen : IProduct
     {
-        public int Cost => throw new NotImplementedException();
-
+        public int Cost
+        {
+            get { return 4; }
+        }
         public string Buy()
         {
-            throw new NotImplementedException();
+            return "Buying a cup of ramen";
         }
 
         public string Description()
         {
-            throw new NotImplementedException();
+            return "PHOOO";
         }
 
         public void Use()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Eating that cup of ramen ");
+            Console.WriteLine("nom.. nom");
+            Thread.Sleep(3000);
+            Console.WriteLine("nom.. nom");
+            Thread.Sleep(2000);
+            Console.WriteLine("nom.. nom");
+            Thread.Sleep(1000); ;
         }
     }
 }
