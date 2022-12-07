@@ -28,6 +28,7 @@ namespace Automat.Products.LiquidProducts
             return "Hot";
         }
 
+      
 
         public void Use()
         {

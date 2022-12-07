@@ -2,10 +2,10 @@
 {
     public interface IProduct
     {
-        int Cost { get; }
+         int Cost { get; }
 
 
-
+       
         string Buy();
         string Description();
         void Use();
