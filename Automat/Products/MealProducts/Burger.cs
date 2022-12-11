@@ -9,21 +9,29 @@ namespace Automat.Products.MealProducts
     public class Burger : IProduct
 
     {
-        public int Cost => throw new NotImplementedException();
-
+        public int Cost
+        {
+            get { return 3; }
+        }
         public string Buy()
         {
-            throw new NotImplementedException();
+            return "Buying a burger";
         }
 
         public string Description()
         {
-            throw new NotImplementedException();
+            return "tripple cheese";
         }
 
         public void Use()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Eating that burger ");
+            Console.WriteLine("nom.. nom");
+            Thread.Sleep(3000);
+            Console.WriteLine("nom.. nom");
+            Thread.Sleep(2000);
+            Console.WriteLine("nom.. nom");
+            Thread.Sleep(1000); ;
         }
     }
 }

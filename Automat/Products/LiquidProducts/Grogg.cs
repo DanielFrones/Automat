@@ -11,7 +11,7 @@ namespace Automat.Products.LiquidProducts
     {
         public int Cost
         {
-            get { return 18; }
+            get { return 15; }
         }
 
         public string Buy()

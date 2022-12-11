@@ -13,19 +13,13 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
+
+            //New instance of a vending machine.
             var vendingMachine = new VendingMachine();
 
-            //while (vendingMachine.wallet.Total > 0 )
-            //{
+            // Runs the main menu of the vending machine.
             vendingMachine.ChooseCategory(vendingMachine.IniateVendingMachine());
-            //}
-            //Console.WriteLine("No more cash");
-
-
-
-
-            //ILiquidProcuct liquidProcuct =VendingMachine.ChooseLiquid()
-
+            
 
 
         }
