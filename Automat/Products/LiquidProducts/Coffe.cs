@@ -1,11 +1,4 @@
-﻿using Automat.Products;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Automat.Products.LiquidProducts
+﻿namespace Automat.Products.LiquidProducts
 {
     public class Coffe : IProduct
     {
@@ -14,8 +7,6 @@ namespace Automat.Products.LiquidProducts
         {
             get { return 6; }
         }
-
-
 
         public string Buy()
         {
@@ -27,8 +18,6 @@ namespace Automat.Products.LiquidProducts
         {
             return "Hot";
         }
-
-      
 
         public void Use()
         {

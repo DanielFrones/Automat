@@ -267,7 +267,7 @@ namespace Automat
                     IProduct coffe = new Coffe();
                     if (coffe.Cost < cashInMachine)
                     {
-                        Console.WriteLine($"Would you like to purchase a coffe for: {coffe.Cost}$ ?\n 1: yes\n2: no(Back to main menu)");
+                        Console.WriteLine($"Would you like to purchase a coffe for: {coffe.Cost}$ ?\n1: yes\n2: no(Back to main menu)");
 
                         var choice = Convert.ToInt32(Console.ReadLine());
                         switch (choice)
@@ -275,7 +275,7 @@ namespace Automat
                             case 1:
                                 cashInMachine -= coffe.Cost;
                                 TotalCashInMachine();
-                                Console.WriteLine("What would you like to drink the coffe?\n 1: yes\n 2: no");
+                                Console.WriteLine("What would you like to drink the coffe?\n1: yes\n2: no");
                                 liquid = Convert.ToInt32(Console.ReadLine());
 
                                 switch (liquid)
@@ -324,7 +324,7 @@ namespace Automat
                     {
 
 
-                        Console.WriteLine($"Would you like to purchase a {milk.Description()} for: {milk.Cost}$ ?\n 1: yes\n2: no(Back to main menu)");
+                        Console.WriteLine($"Would you like to purchase a {milk.Description()} for: {milk.Cost}$ ?\n1: yes\n2: no(Back to main menu)");
 
                         var choiceMilk = Convert.ToInt32(Console.ReadLine());
                         switch (choiceMilk)
@@ -332,7 +332,7 @@ namespace Automat
                             case 1:
                                 cashInMachine -= milk.Cost;
                                 TotalCashInMachine();
-                                Console.WriteLine($"What would you like to drink the {milk.Description()}?\n 1: yes\n 2: no");
+                                Console.WriteLine($"What would you like to drink the {milk.Description()}?\n1: yes\n2: no");
                                 liquid = Convert.ToInt32(Console.ReadLine());
 
                                 switch (liquid)
@@ -380,7 +380,7 @@ namespace Automat
                     IProduct grogg = new Grogg();
                     if (grogg.Cost < cashInMachine)
                     {
-                        Console.WriteLine($"Would you like to purchase a {grogg.Description()} for: {grogg.Cost}$ ?\n 1: yes\n2: no(Back to main menu)");
+                        Console.WriteLine($"Would you like to purchase a {grogg.Description()} for: {grogg.Cost}$ ?\n1: yes\n2: no(Back to main menu)");
 
                         var choiceGrogg = Convert.ToInt32(Console.ReadLine());
                         switch (choiceGrogg)
@@ -388,7 +388,7 @@ namespace Automat
                             case 1:
                                 cashInMachine -= grogg.Cost;
                                 TotalCashInMachine();
-                                Console.WriteLine($"What would you like to drink the {grogg.Description()}?\n 1: yes\n 2: no");
+                                Console.WriteLine($"What would you like to drink the {grogg.Description()}?\n1: yes\n2: no");
                                 liquid = Convert.ToInt32(Console.ReadLine());
 
                                 switch (liquid)
@@ -451,7 +451,7 @@ namespace Automat
                     IProduct burger = new Burger();
                     if (burger.Cost < cashInMachine)
                     {
-                        Console.WriteLine($"Would you like to purchase a {burger.Description()} for: {burger.Cost}$ ?\n 1: yes\n2: no(Back to main menu)");
+                        Console.WriteLine($"Would you like to purchase a {burger.Description()} for: {burger.Cost}$ ?\n1: yes\n2: no(Back to main menu)");
 
                         var choice = Convert.ToInt32(Console.ReadLine());
                         switch (choice)
@@ -459,7 +459,7 @@ namespace Automat
                             case 1:
                                 cashInMachine -= burger.Cost;
                                 TotalCashInMachine();
-                                Console.WriteLine($"Would you like to eat the {burger.Description()}?\n 1: yes\n 2: no");
+                                Console.WriteLine($"Would you like to eat the {burger.Description()}?\n1: yes\n2: no");
                                 meal = Convert.ToInt32(Console.ReadLine());
 
                                 switch (meal)
@@ -508,7 +508,7 @@ namespace Automat
                     {
 
 
-                        Console.WriteLine($"Would you like to purchase a {cupOfRamen.Description()} for: {cupOfRamen.Cost}$ ?\n 1: yes\n2: no(Back to main menu)");
+                        Console.WriteLine($"Would you like to purchase a {cupOfRamen.Description()} for: {cupOfRamen.Cost}$ ?\n1: yes\n2: no(Back to main menu)");
 
                         var choiceCupOfRamen = Convert.ToInt32(Console.ReadLine());
                         switch (choiceCupOfRamen)
@@ -516,7 +516,7 @@ namespace Automat
                             case 1:
                                 cashInMachine -= cupOfRamen.Cost;
                                 TotalCashInMachine();
-                                Console.WriteLine($"What would you like to eat the {cupOfRamen.Description()}?\n 1: yes\n 2: no");
+                                Console.WriteLine($"What would you like to eat the {cupOfRamen.Description()}?\n1: yes\n2: no");
                                 meal = Convert.ToInt32(Console.ReadLine());
 
                                 switch (meal)
@@ -564,7 +564,7 @@ namespace Automat
                     IProduct haggies = new Haggies();
                     if (haggies.Cost < cashInMachine)
                     {
-                        Console.WriteLine($"Would you like to purchase a {haggies.Description()} for: {haggies.Cost}$ ?\n 1: yes\n2: no(Back to main menu)");
+                        Console.WriteLine($"Would you like to purchase a {haggies.Description()} for: {haggies.Cost}$ ?\n1: yes\n2: no(Back to main menu)");
 
                         var choiceHaggies = Convert.ToInt32(Console.ReadLine());
                         switch (choiceHaggies)
@@ -572,7 +572,7 @@ namespace Automat
                             case 1:
                                 cashInMachine -= haggies.Cost;
                                 TotalCashInMachine();
-                                Console.WriteLine($"What would you like to eat the {haggies.Description()}?\n 1: yes\n 2: no");
+                                Console.WriteLine($"What would you like to eat the {haggies.Description()}?\n1: yes\n2: no");
                                 meal = Convert.ToInt32(Console.ReadLine());
 
                                 switch (meal)
@@ -634,7 +634,7 @@ namespace Automat
                     IProduct aRealGentlmen = new ARealGentlemen();
                     if (aRealGentlmen.Cost < cashInMachine)
                     {
-                        Console.WriteLine($"Would you like to purchase a {aRealGentlmen.Description()} for: {aRealGentlmen.Cost}$ ?\n 1: yes\n2: no(Back to main menu)");
+                        Console.WriteLine($"Would you like to purchase a {aRealGentlmen.Description()} for: {aRealGentlmen.Cost}$ ?\n1: yes\n2: no(Back to main menu)");
 
                         var choice = Convert.ToInt32(Console.ReadLine());
                         switch (choice)
@@ -642,7 +642,7 @@ namespace Automat
                             case 1:
                                 cashInMachine -= aRealGentlmen.Cost;
                                 TotalCashInMachine();
-                                Console.WriteLine($"What would you like to use a {aRealGentlmen.Description()}?\n 1: yes\n 2: no");
+                                Console.WriteLine($"What would you like to use a {aRealGentlmen.Description()}?\n1: yes\n2: no");
                                 rwp = Convert.ToInt32(Console.ReadLine());
 
                                 switch (rwp)
@@ -688,11 +688,8 @@ namespace Automat
                 case 2:
                     IProduct sylvester = new Sylvester();
                     if (sylvester.Cost < cashInMachine)
-                    {
-
-                        cashInMachine -= sylvester.Cost;
-                        TotalCashInMachine();
-                        Console.WriteLine($"Would you like to purchase a {sylvester.Description()} for: {sylvester.Cost}$ ?\n 1: yes\n2: no(Back to main menu)");
+                    { 
+                        Console.WriteLine($"Would you like to purchase a {sylvester.Description()} for: {sylvester.Cost}$ ?\n1: yes\n2: no(Back to main menu)");
 
                         var choiceSylvester = Convert.ToInt32(Console.ReadLine());
                         switch (choiceSylvester)
@@ -700,7 +697,7 @@ namespace Automat
                             case 1:
                                 cashInMachine -= sylvester.Cost;
                                 TotalCashInMachine();
-                                Console.WriteLine($"What would you like to use the {sylvester.Description()}?\n 1: yes\n 2: no");
+                                Console.WriteLine($"What would you like to use the {sylvester.Description()}?\n1: yes\n2: no");
                                 rwp = Convert.ToInt32(Console.ReadLine());
 
                                 switch (rwp)
@@ -748,8 +745,7 @@ namespace Automat
                     IProduct umbrella = new Umbrella();
                     if (umbrella.Cost < cashInMachine)
                     {
-                        cashInMachine -= umbrella.Cost;
-                        TotalCashInMachine();
+              
                         Console.WriteLine($"Would you like to purchase a {umbrella.Description()} for: {umbrella.Cost}$ ?\n 1: yes\n2: no(Back to main menu)");
 
                         var choiceGrogg = Convert.ToInt32(Console.ReadLine());
@@ -758,7 +754,7 @@ namespace Automat
                             case 1:
                                 cashInMachine -= umbrella.Cost;
                                 TotalCashInMachine();
-                                Console.WriteLine($"What would you like to use the {umbrella.Description()}?\n 1: yes\n 2: no");
+                                Console.WriteLine($"What would you like to use the {umbrella.Description()}?\n1: yes\n2: no");
                                 rwp = Convert.ToInt32(Console.ReadLine());
 
                                 switch (rwp)
